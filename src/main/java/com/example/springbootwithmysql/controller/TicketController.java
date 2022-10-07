@@ -9,15 +9,15 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.springbootwithmysql.dao.TicketDao;
 import com.example.springbootwithmysql.model.Ticket;
+import com.example.springbootwithmysql.repository.TicketRepository;
 
 @RestController
 @RequestMapping("/tickets")
 public class TicketController {
 
 	@Autowired
-	TicketDao dao;
+	TicketRepository dao;
 
 	@PostMapping("/bookTickets")
 	private String bookTicket(@RequestBody List<Ticket> tickets) {
