@@ -1,0 +1,165 @@
+{
+	"info": {
+		"_postman_id": "91f5cedc-3d94-409d-a1db-60ad3c718d3a",
+		"name": "SpringbootMySql",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1545094"
+	},
+	"item": [
+		{
+			"name": "bookTickets",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"amount\": 400,\r\n        \"category\": \"Cinema\"\r\n    },\r\n    {\r\n        \"amount\": 500,\r\n        \"category\": \"category2\"\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8082/tickets/bookTickets",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"tickets",
+						"bookTickets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getTickets",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8082/tickets/getTickets",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"tickets",
+						"getTickets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addDepartment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"departmentName\": \"WIPRO\",\r\n        \"departmentAddress\": \"KOLKSTA\",\r\n        \"departmentCode\": \"D0002\"\r\n    },\r\n    {\r\n        \"departmentName\": \"COFORGE\",\r\n        \"departmentAddress\": \"NOIDS\",\r\n        \"departmentCode\": \"D0003\"\r\n    },\r\n    {\r\n        \"departmentName\": \"HCL\",\r\n        \"departmentAddress\": \"MUMBSI\",\r\n        \"departmentCode\": \"D0004\"\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8082/departments/addDepartment",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"departments",
+						"addDepartment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateDepartment",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"departmentName\":\"TCSL\",\r\n    \"departmentAddress\":\"Delhi\",\r\n    \"departmentCode\":\"D0001\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8082/departments/updateDepartment/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"departments",
+						"updateDepartment",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteDepartment",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8082/departments/deleteDepartment/12",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"departments",
+						"deleteDepartment",
+						"12"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fetchDepartment",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8082/departments/fetchDepartment",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"departments",
+						"fetchDepartment"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
