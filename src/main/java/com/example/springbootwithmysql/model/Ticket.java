@@ -1,11 +1,20 @@
 package com.example.springbootwithmysql.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 @Table(name = "Ticket")
 public class Ticket {
 
@@ -15,39 +24,5 @@ public class Ticket {
 
 	private double amount;
 	private String category;
-
-	public Ticket() {
-	}
-
-	public Ticket(int id, double amount, String category) {
-		super();
-		this.id = id;
-		this.amount = amount;
-		this.category = category;
-	}
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
-	public double getAmount() {
-		return amount;
-	}
-
-	public void setAmount(double amount) {
-		this.amount = amount;
-	}
-
-	public String getCategory() {
-		return category;
-	}
-
-	public void setCategory(String category) {
-		this.category = category;
-	}
 
 }
